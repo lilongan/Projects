@@ -1,4 +1,5 @@
 from pet import Pet, CuddlyPet
+from toy import Toy
 
 # Begin with no pets.
 pets = []

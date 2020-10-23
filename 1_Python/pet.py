@@ -30,3 +30,6 @@ class CuddlyPet(Pet):
         # Super cuddle powers, activate!
         for i in range(self.cuddle_level):
             other_pet.get_love()
+
+hopp = Pet("hopp")
+print(hopp)
