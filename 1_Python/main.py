@@ -8,8 +8,8 @@ main_menu = [
     "Adopt a Pet",
     "Play with Pet",
     "Feed Pet",
-    "View status of pets",
     "Give a toy to all your pets",
+    "View status of pets",
     "Do nothing",
 ]
 
@@ -37,6 +37,11 @@ def get_user_choice(choice_list):
             print_menu_error()
     return choice
 
+adoption_menu = [
+    "Pet",
+    "Cuddly Pet"
+]
+
 def main():    
     while True:
         choice = get_user_choice(main_menu)
@@ -57,7 +62,15 @@ def main():
                 pet.eat_food()
         if choice == 4:
             for pet in pets:
+                pet.get_toy(Toy())
+        if choice == 5:
+            for pet in pets:
                 print(pet)
+        if choice == 6:
+            for pet in pets:
+                pet.be_alive()
+        else:
+            pass
             
 main()
 # print(main_menu)

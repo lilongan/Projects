@@ -38,5 +38,5 @@ class CuddlyPet(Pet):
         for i in range(self.cuddle_level):
             other_pet.get_love()
 
-hopp = Pet("hopp")
-print(hopp)
+# hopp = Pet("hopp")
+# print(hopp)
