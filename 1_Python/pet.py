@@ -21,7 +21,14 @@ class Pet:
 
     def get_toy(self, toy):
         self.toys.append(toy)
-        
+
+    def __str__(self):
+            return """
+            %s:
+            Fullness: %d
+            Happiness: %d
+            """ % (self.name, self.fullness, self.happiness) 
+
 class CuddlyPet(Pet):
     def __init__(self, name, fullness=50, hunger=5, cuddle_level=1):
         super().__init__(name, fullness, 100, hunger, 1)

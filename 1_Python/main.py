@@ -1,7 +1,8 @@
+from subprocess import call
+import os
 from pet import Pet, CuddlyPet
 from toy import Toy
 
-# Begin with no pets.
 pets = []
 
 main_menu = [   
@@ -11,6 +12,7 @@ main_menu = [
     "Give a toy to all your pets",
     "View status of pets",
     "Do nothing",
+    "Exit the game"
 ]
 
 def print_menu_error():
@@ -42,8 +44,12 @@ adoption_menu = [
     "Cuddly Pet"
 ]
 
+def clear():
+    call('clear' if os.name == 'posix' else 'cls')
+
 def main():    
     while True:
+        clear()
         choice = get_user_choice(main_menu)
         if choice == 1:
             pet_name = input("What would you like to name your pet? ")
@@ -66,12 +72,16 @@ def main():
         if choice == 5:
             for pet in pets:
                 print(pet)
+                input("")
         if choice == 6:
             for pet in pets:
                 pet.be_alive()
-        else:
-            pass
+        if choice == 7:
+            clear()
+            print("Thanks for adopting and taking care of your pet.")
+            return False
             
-main()
-# print(main_menu)
+playing = True
+while playing:
+    playing = main()
 
