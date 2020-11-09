@@ -1,9 +1,7 @@
 .game{
     width: 720px;
-    border: groove 10px #dddddd;
     margin: 0 auto;
     background: rgb(245, 205, 118);
-    border: groove 5px;
     text-align:center;
     min-height:430px;
 }
