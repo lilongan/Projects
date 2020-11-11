@@ -190,6 +190,7 @@
 
                 score = players[i].Points;
             }
+            console.log(winner)
 
             document.getElementById('status').innerHTML = 'Winner: Player ' + players[winner].ID;
             document.getElementById("status").style.display = "inline-block";
