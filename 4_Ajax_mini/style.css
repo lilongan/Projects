@@ -1,0 +1,42 @@
+body {
+    background-color: #d0e4fe;
+  }
+  
+  h1 {
+    color: rgb(221, 64, 2);
+    text-align: center;
+    font-family: "Times New Roman", Serif;
+    font-size: 30px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-family: "Times New Roman", Serif;
+    font-size: 20px;
+  }
+
+  .header {
+    overflow: auto;
+    /* since all the elements are floating,
+       setting overflow will allow the rest of
+       the layout to flow properly */
+  }
+  .header-menu {
+    float: right;
+    list-style-type: none;
+  }
+  
+  .header-menu > li {
+    float: left;
+    padding-right: 10px; /* whitespace */
+  }
+  
+  .container {
+    overflow: auto; /* don't forget to adjust the overflow */
+    clear: both;
+  }
+  
+  .sidebar {
+    float: right;
+    padding: 10px;
+  }

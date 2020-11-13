@@ -6,13 +6,17 @@
     <title>Ajax-mini RandomUser Project</title>
 </head>
 <body>
-    <!-- <script src="http://localhost:5432/ajax.js"></script>
-    <script> -->
-        <script src="ajax.js"></script>
-        <script src="data.json"></script>
-        <!-- <script>
-    </script> -->
+    <script src="main.js"></script>
+    <script src="./modules/ajax.js"></script>
+    <script src="data.json"></script>
+    <script>
+            ajax("data.json", (r)=>{
+        console.log(JSON.parse(r))
+    })
+    </script>
     <div>Ajax Mini RandomUser Project</div>
+    <h3></h3>
+    <p></p>
 
 </body>
 </html>
